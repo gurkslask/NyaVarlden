@@ -10,6 +10,7 @@ from NyaVarldenApp.app import create_app
 from NyaVarldenApp.user.models import User
 from NyaVarldenApp.settings import DevConfig, ProdConfig
 from NyaVarldenApp.database import db
+from flask.ext.images import Images
 
 if os.environ.get("NYAVARLDENAPP_ENV") == 'prod':
     app = create_app(ProdConfig)
@@ -20,7 +21,7 @@ HERE = os.path.abspath(os.path.dirname(__file__))
 TEST_PATH = os.path.join(HERE, 'tests')
 
 manager = Manager(app)
-
+images = Images(app)
 def _make_context():
     """Return context dict for a shell session so you can access
     app, db, and the User model by default.

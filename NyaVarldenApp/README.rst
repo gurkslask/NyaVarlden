@@ -16,7 +16,7 @@ First, set your app's secret key as an environment variable. For example, exampl
 
 
 Then run the following commands to bootstrap your environment.
-
+tte
 
 ::
 
